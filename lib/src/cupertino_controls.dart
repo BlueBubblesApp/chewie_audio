@@ -128,9 +128,11 @@ class _CupertinoControlsState extends State<CupertinoControls>
                   )
                 : Row(
                     children: <Widget>[
-                      _buildSkipBack(iconColor, barHeight),
+                      if (chewieController.showSeekButtons)
+                        _buildSkipBack(iconColor, barHeight),
                       _buildPlayPause(controller, iconColor, barHeight),
-                      _buildSkipForward(iconColor, barHeight),
+                      if (chewieController.showSeekButtons)
+                        _buildSkipForward(iconColor, barHeight),
                       _buildPosition(iconColor),
                       _buildProgressBar(),
                       _buildRemaining(iconColor),

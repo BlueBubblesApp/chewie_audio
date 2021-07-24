@@ -127,8 +127,8 @@ class _MaterialControlsState extends State<MaterialControls>
         child: Container(
           height: barHeight,
           padding: const EdgeInsets.only(
-            left: 8.0,
-            right: 8.0,
+            left: 3.0,
+            right: 3.0,
           ),
           child: const Icon(Icons.speed),
         ),
@@ -169,10 +169,10 @@ class _MaterialControlsState extends State<MaterialControls>
       child: Container(
         height: barHeight,
         color: Colors.transparent,
-        margin: const EdgeInsets.only(left: 8.0, right: 4.0),
+        margin: const EdgeInsets.only(left: 3.0, right: 3.0),
         padding: const EdgeInsets.only(
-          left: 12.0,
-          right: 12.0,
+          left: 6.0,
+          right: 6.0,
         ),
         child: AnimatedPlayPause(
           playing: controller.value.isPlaying,
@@ -186,7 +186,7 @@ class _MaterialControlsState extends State<MaterialControls>
     final duration = _latestValue.duration;
 
     return Padding(
-      padding: const EdgeInsets.only(right: 24.0),
+      padding: const EdgeInsets.only(right: 12.0),
       child: Text(
         '${formatDuration(position)} / ${formatDuration(duration)}',
         style: const TextStyle(
@@ -232,7 +232,7 @@ class _MaterialControlsState extends State<MaterialControls>
   Widget _buildProgressBar() {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.only(right: 20.0),
+        padding: const EdgeInsets.only(right: 10.0),
         child: MaterialVideoProgressBar(
           controller,
           onDragStart: () {},
