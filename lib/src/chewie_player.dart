@@ -61,6 +61,9 @@ class ChewieAudioController extends ChangeNotifier {
     this.allowMuting = true,
     this.allowPlaybackSpeedChanging = true,
     this.showSeekButtons = true,
+    this.cupertinoBackgroundColor,
+    this.cupertinoIconColor,
+    this.cupertinoColumnAlignment,
     this.playbackSpeeds = const [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
   }) : assert(playbackSpeeds.every((speed) => speed > 0),
             'The playbackSpeeds values must all be greater than 0') {
@@ -86,6 +89,9 @@ class ChewieAudioController extends ChangeNotifier {
   final bool showControls;
 
   final bool showSeekButtons;
+  final Color? cupertinoBackgroundColor;
+  final Color? cupertinoIconColor;
+  final MainAxisAlignment? cupertinoColumnAlignment;
 
   /// Defines customised controls. Check [MaterialControls] or
   /// [CupertinoControls] for reference.

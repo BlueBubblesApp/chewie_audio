@@ -65,6 +65,7 @@ class _CupertinoControlsState extends State<CupertinoControls>
     final buttonPadding = orientation == Orientation.portrait ? 16.0 : 24.0;
 
     return Column(
+      mainAxisAlignment: chewieController.cupertinoColumnAlignment ?? MainAxisAlignment.start,
       children: <Widget>[
         _buildTopBar(
             backgroundColor, iconColor, barHeight, buttonPadding),
